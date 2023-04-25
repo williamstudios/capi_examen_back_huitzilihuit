@@ -13,11 +13,14 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
-Route::get('users/', [UserController::class, 'index'])->name("test");
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    
+    Route::get('/users', [UserController::class, 'index'])->name("test")->middleware('corsorigin');
+
+
 
 

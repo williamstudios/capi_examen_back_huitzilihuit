@@ -20,6 +20,11 @@ class Domicilio extends Migration
             $table->string('colonia', 250)->nullable();
             $table->string('cp', 10)->nullable();
             $table->string('ciudad', 250)->nullable();
+            $table->date('updated_at')->nullable();
+            $table->date('created_at')->nullable();
+
+            
+            
         });
     }
     

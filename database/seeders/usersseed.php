@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\user_domicilio;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+
 class usersseed extends Seeder
 {
     /**
@@ -15,7 +16,7 @@ class usersseed extends Seeder
      */
     public function run()
     {
-        user_domicilio::factory()->count(count: 100)->create();
+        user_domicilio::factory(100)->create();
         /*DB::table('user_domicilio')->insert([
             'domicilio' => "Domicilio de prueba",
             'numero_exterior' => "154",
